@@ -1,11 +1,15 @@
-dnf module disable mysql -y
+echo install
+dnf module disable mysql -y >>/tmp/expense.log
 
 cp mysql.repo /etc/yum.repos.d/mysql.repo
 
-dnf install mysql-community-server -y
+echo installing Mysql
+dnf install mysql-community-server -y >>/tmp/expense.log
 
-systemctl enable mysqld
-systemctl start mysqld
+echo restart service
+systemctl enable mysqld >>/tmp/expense.log
+systemctl start mysqld >>/tmp/expense.log
+
 
 mysql_secure_installation --set-root-pass ExpenseApp@1
 
