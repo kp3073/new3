@@ -3,9 +3,7 @@ dnf install nginx -y >>/tmp/expense.log
 
 cp expense.conf /etc/nginx/default.d/expense.conf
 
-echo restartNginx service
-systemctl enable nginx >>/tmp/expense.log
-systemctl start nginx >>/tmp/expense.log
+
 
 echo removing old contant
 rm -rf /usr/share/nginx/html/* >>/tmp/expense.log
@@ -18,5 +16,8 @@ echo unziping File
 unzip /tmp/frontend.zip >>/tmp/expense.log
 
 
-echo resart browser
+
+
+echo restartNginx service
+systemctl enable nginx >>/tmp/expense.log
 systemctl restart nginx >>/tmp/expense.log
