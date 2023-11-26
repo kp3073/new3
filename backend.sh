@@ -21,7 +21,7 @@ mkdir /app
 
 cd /app
 
-download_and_extrect
+download_and_extract
 
 
 

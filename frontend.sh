@@ -13,7 +13,7 @@ rm -rf /usr/share/nginx/html/* &>>$log_file
 
 cd /usr/share/nginx/html &>>$log_file
 
-download_and_extrect
+download_and_extract
 
 echo restartNginx service
 systemctl enable nginx &>>$log_file

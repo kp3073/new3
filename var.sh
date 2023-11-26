@@ -1,10 +1,9 @@
 log_file=/tmp/expense.log
 
-download_and_extrect() {
-  echo downloding $component content
-  curl -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip >>$log_file
+download_and_extract() {
+  echo Download $component Code
+  curl -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip >>$log_file
+  stat_check
 
-
-  echo extract $component File
+  echo Extracting $component Code
   unzip /tmp/$component.zip >>$log_file
-}
