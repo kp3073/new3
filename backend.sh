@@ -20,7 +20,7 @@ mkdir /app >>log_file
 
 
 echo dowloading backend contant
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>/tmp/expense.log
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>log_file
 cd /app >>log_file
 
 echo unziping the file
