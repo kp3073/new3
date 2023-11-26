@@ -24,6 +24,8 @@ cd /app &>>$log_file
 
 download_and_extrect
 
+cd /App
+
 echo installing NPm
 npm install &>>$log_file
 
