@@ -13,7 +13,7 @@ systemctl enable mysqld &>>$log_file
 systemctl start mysqld &>>$log_file
 
 
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$log_file
+mysql_secure_installation --set-root-pass ExpenseApp@1 >>$log_file
 
-mysql -uroot -pExpenseApp@1 &>>$log_file
+mysql -uroot -pExpenseApp@1 >>$log_file
 
