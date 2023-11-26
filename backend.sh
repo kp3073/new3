@@ -26,7 +26,7 @@ echo Download backend Code
   echo Extracting backend Code
   unzip /tmp/backend.zip >>$log_file
 
-
+cd /app
 
 echo installing NPm
 npm install &>>$log_file
