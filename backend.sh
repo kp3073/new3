@@ -41,5 +41,5 @@ systemctl start backend &>>$log_file
 echo installing mysqld
 dnf install mysql -y &>>$log_file
 
-mysql -h 172.31.85.186 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
+mysql -h 172.31.86.159 -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
 
