@@ -1,5 +1,4 @@
 source var.sh
-component=backend
 
 echo NODjs Disable
 dnf module disable nodejs -y &>>$log_file
@@ -20,7 +19,12 @@ rm -rf /app
 mkdir /app
 cd /app
 
-download_and_extract
+echo Download backend Code
+  curl -s -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
+  stat_check
+
+  echo Extracting backend Code
+  unzip /tmp/backend.zip >>$log_file
 
 
 

@@ -13,7 +13,12 @@ rm -rf /usr/share/nginx/html/* &>>$log_file
 
 cd /usr/share/nginx/html &>>$log_file
 
-download_and_extract
+echo Download frontend Code
+  curl -s -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >>$log_file
+  stat_check
+
+  echo Extracting frontend Code
+  unzip /tmp/frontend.zip >>$log_file
 
 echo restartNginx service
 systemctl enable nginx &>>$log_file
