@@ -1,4 +1,4 @@
-log_file=/tmp/expense.log
+source var.sh
 
 echo install
 dnf module disable mysql -y >>$log_file

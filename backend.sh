@@ -1,4 +1,6 @@
-log_file=/tmp/expense.log
+source var.sh
+
+component=backend
 
 echo NODjs Disable
 dnf module disable nodejs -y >>$log_file
@@ -18,13 +20,9 @@ useradd expense >>$log_file
 echo changing dir
 mkdir /app >>$log_file
 
-
-echo dowloading backend contant
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
 cd /app >>$log_file
 
-echo unziping the file
-unzip /tmp/backend.zip >>$log_file
+download_and_extrect
 
 cd /app >>$log_file
 
