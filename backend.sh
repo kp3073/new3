@@ -1,5 +1,4 @@
 source var.sh
-
 component=backend
 
 echo NODjs Disable
@@ -18,13 +17,13 @@ echo adding useradd
 useradd expense &>>$log_file
 
 echo changing dir
-mkdir /app &>>$log_file
+mkdir /app
 
-cd /app &>>$log_file
+cd /app
 
 download_and_extrect
 
-cd /App
+
 
 echo installing NPm
 npm install &>>$log_file
