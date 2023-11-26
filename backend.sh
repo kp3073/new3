@@ -37,7 +37,7 @@ echo restarting service
 systemctl daemon-reload &>>$log_file
 
 systemctl enable backend &>>$log_file
-systemctl start backend &>>$log_file
+systemctl restart backend &>>$log_file
 
 
 echo installing mysqld
