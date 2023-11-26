@@ -21,7 +21,7 @@ cd /app
 
 echo Download backend Code
   curl -s -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
-  stat_check
+
 
   echo Extracting backend Code
   unzip /tmp/backend.zip >>$log_file
