@@ -1,5 +1,5 @@
 source var.sh
-component=frontend
+compo=frontend
 
 echo installing nginx
 dnf install nginx -y &>>$log_file
@@ -13,12 +13,7 @@ rm -rf /usr/share/nginx/html/* &>>$log_file
 
 cd /usr/share/nginx/html &>>$log_file
 
-echo Download frontend Code
-  curl -s -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >>$log_file
-  stat_check
-
-  echo Extracting frontend Code
-  unzip /tmp/frontend.zip >>$log_file
+download
 
 echo restartNginx service
 systemctl enable nginx &>>$log_file
