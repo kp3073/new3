@@ -15,6 +15,7 @@ cp backend.service /etc/systemd/system/backend.service &>>$log_file
 echo adding useradd
 useradd expense &>>$log_file
 
+rn -rf /app
 
 mkdir /app
 cd /app
