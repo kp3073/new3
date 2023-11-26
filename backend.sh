@@ -21,9 +21,14 @@ rn -rf /app
 mkdir /app
 cd /app
 
-download
+ echo Download $compo Code
+    curl -s -o /tmp/$compo.zip https://expense-artifacts.s3.amazonaws.com/$compo.zip >>$log_file
 
 
+    echo Extracting $compo Code
+    unzip /tmp/$compo.zip >>$log_file
+
+cd /app
 
 echo installing NPm
 npm install &>>$log_file
