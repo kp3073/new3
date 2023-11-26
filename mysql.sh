@@ -9,11 +9,11 @@ echo installing Mysql
 dnf install mysql-community-server -y &>>$log_file
 
 echo restart service
-systemctl enable mysqld &>>$log_log_file
-systemctl start mysqld &>>$log_log_file
+systemctl enable mysqld &>>$log_file
+systemctl start mysqld &>>$log_file
 
 
-mysql_secure_installation --set-root-pass ExpenseApp@1
+mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$log_file
 
-mysql -uroot -pExpenseApp@1
+mysql -uroot -pExpenseApp@1 &>>$log_file
 
