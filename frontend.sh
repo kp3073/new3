@@ -9,7 +9,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf &>>$log_file
     else
       echo -e "\e[31mFaild\e[0m"
     fi
-}
+
 
 
 echo removing old contant
@@ -19,7 +19,7 @@ rm -rf /usr/share/nginx/html/* &>>$log_file
     else
       echo -e "\e[31mFaild\e[0m"
     fi
-}
+
 
 cd /usr/share/nginx/html &>>$log_file
 
@@ -31,7 +31,7 @@ cd /usr/share/nginx/html &>>$log_file
     else
       echo -e "\e[31mFaild\e[0m"
     fi
-}
+
 
     echo Extracting $compo Code
     unzip /tmp/$compo.zip >>$log_file
@@ -40,7 +40,7 @@ cd /usr/share/nginx/html &>>$log_file
     else
       echo -e "\e[31mFaild\e[0m"
     fi
-}
+
 
 echo restartNginx service
 systemctl enable nginx &>>$log_file
@@ -50,4 +50,3 @@ systemctl restart nginx &>>$log_file
     else
       echo -e "\e[31mFaild\e[0m"
     fi
-}
