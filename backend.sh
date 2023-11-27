@@ -4,11 +4,16 @@ compo=backend
 echo NODjs Disable
 dnf module disable nodejs -y &>>$log_file
 
+
+
+
 echo enable Nodjs
 dnf module enable nodejs:18 -y &>>$log_file
+echo $?
 
 echo installing Nodjs
 dnf install nodejs -y &>>$log_file
+echo $?
 
 echo coping fine
 cp backend.service /etc/systemd/system/backend.service &>>$log_file
