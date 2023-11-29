@@ -24,7 +24,7 @@ if [ $? -ne 0 ]; then
 fi
 expression
 
-rn -rf /app
+rm -rf /app
 expression
 
 mkdir /app
