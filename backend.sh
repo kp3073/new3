@@ -13,9 +13,12 @@ echo installing Nodjs
 dnf install nodejs -y &>>$log_file
 expression
 
-echo coping fine
-cp backend.service /etc/systemd/system/backend.service &>>$log_file
-expression
+type npm &>>$log_file
+  if [ $? -ne 0 ]; then
+  echo coping fine
+  cp backend.service /etc/systemd/system/backend.service &>>$log_file
+  expression
+fi
 
 echo adding useradd
 id expense &>>$log_file
