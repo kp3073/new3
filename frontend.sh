@@ -17,11 +17,11 @@ cd /usr/share/nginx/html &>>$log_file
 expression
 
  echo Download $compo Code
- curl -s -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >>$log_file
+ curl -s -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>>$log_file
 expression
 
  echo Extracting frontend Code
- unzip /tmp/frontend.zip >>$log_file
+ unzip /tmp/frontend.zip &>>$log_file
 expression
 
 echo restartNginx service
