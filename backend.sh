@@ -23,10 +23,10 @@ mkdir /app
 cd /app
 
  echo Download backend Code
-    curl -s -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
+  curl -s -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
 
-    echo Extracting backend Code
-    unzip /tmp/backend.zip >>$log_file
+  echo Extracting backend Code
+  unzip /tmp/backend.zip >>$log_file
 cd /app
 
 echo installing NPm
