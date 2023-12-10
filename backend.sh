@@ -57,5 +57,5 @@ dnf install mysql -y &>>$log_file
 expression
 
 expense_root_password=$1
-mysql -h 172.31.87.190 -uroot -p$expense_root_password <  /app/schema/backend.sql &>>$log_file
+mysql -h mysql.aligntune.com -uroot -p$expense_root_password <  /app/schema/backend.sql &>>$log_file
 expression
