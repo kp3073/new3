@@ -27,4 +27,3 @@ expression
 echo restartNginx service
 systemctl enable nginx &>>$log_file
 systemctl restart nginx &>>$log_file
-expression
